@@ -1,61 +1,56 @@
-# Environments
+# System/Hidden Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencies
+node_modules/
+vendor/
 .venv/
 venv/
 ENV/
 env/
 
-# Python
-__pycache__/
+# Build/Compiled Artifacts
+dist/
+build/
+out/
+*.o
+*.class
+*.exe
 *.py[cod]
 *$py.class
 *.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
+__pycache__/
 .eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
 *.egg
 
-# Node
-node_modules/
+# Log Files/Caches
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+.pytest_cache/
+.eslintcache
+.stylelintcache
 
-# Build outputs
-dist/
-build/
-
-# Environment variables
+# Sensitive Information
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.env
+.env.*
+!.env.example
+secrets.json
+local.properties
+*.pem
+*.key
 
-# Databases
-*.db
-*.sqlite3
-
-# IDEs
+# IDE/Editor Configurations
 .vscode/
 .idea/
+*.suo
 *.swp
 *.swo
-
-# OS
-.DS_Store
-Thumbs.db
-*.tsbuildinfo
+.project
+.settings/
+.classpath

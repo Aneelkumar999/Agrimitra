@@ -1,4 +1,5 @@
-# AgriMitra - Agricultural Advisor Platform
+
+# AgriMitra v2.0 - Agricultural Advisor Platform
 
 AgriMitra v2.0 is a comprehensive digital platform designed to empower farmers in Telangana and Andhra Pradesh with data-driven insights and AI-powered advice. It provides real-time market information, price predictions, irrigation guidance, and access to government schemes and storage facilities.
 
