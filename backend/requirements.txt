@@ -40,3 +40,4 @@ python-dateutil
 six
 annotated-types
 google-generativeai
+python-jose
