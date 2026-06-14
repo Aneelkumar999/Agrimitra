@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import './App.css';
 
-const API_BASE = "https://agrimitra-backend.onrender.com/api/v1";
+const API_BASE = import.meta.env.VITE_API_BASE;
 
 interface Mandi { id: number; name: string; state: string; }
 interface Commodity { id: number; name: string; msp: number; }
