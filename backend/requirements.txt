@@ -39,3 +39,4 @@ annotated-doc
 python-dateutil
 six
 annotated-types
+google-generativeai
