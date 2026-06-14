@@ -7,7 +7,7 @@ import { translations } from './translations';
 import { 
   TrendingUp, Activity, AlertCircle, User, Settings, 
   LayoutDashboard, MessageSquare, Landmark, Warehouse, Droplets, Send, Bug, Camera, CheckCircle,
-  Calculator, MousePointer2, IndianRupee, LogOut, ExternalLink, Package, History, Languages
+  Calculator, MousePointer2, IndianRupee, LogOut, ExternalLink, History, Languages
 } from 'lucide-react';
 import './App.css';
 
