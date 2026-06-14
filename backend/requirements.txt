@@ -41,3 +41,4 @@ six
 annotated-types
 google-generativeai
 python-jose
+bcrypt
