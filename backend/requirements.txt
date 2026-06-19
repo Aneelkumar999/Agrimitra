@@ -35,10 +35,7 @@ pyyaml
 annotated-types
 python-dateutil
 six
-<<<<<<< HEAD
 annotated-types
 google-generativeai
 python-jose
 bcrypt
-=======
->>>>>>> 98a826a (fixed errors in frontend and backend)
