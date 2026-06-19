@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -10,9 +11,10 @@ import math
 from inference import predict_price
 import os
 from dotenv import load_dotenv
-import google.generativeai as genai
-from pydantic import BaseModel
+from jose import JWTError, jwt
 import auth
+from pydantic import BaseModel
+import google.generativeai as genai
 
 # Load .env
 load_dotenv()
@@ -91,10 +93,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-from fastapi.security import OAuth2PasswordBearer
-from jose import JWTError, jwt
-
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="api/v1/auth/login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login")
 
 def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
     credentials_exception = HTTPException(

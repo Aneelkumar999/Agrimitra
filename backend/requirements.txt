@@ -13,7 +13,6 @@ pydantic
 pydantic-settings
 pydantic[email]
 jinja2
-python-multipart
 anyio
 click
 h11
@@ -33,12 +32,13 @@ uvloop
 scipy
 threadpoolctl
 pyyaml
-alembic
 annotated-types
-annotated-doc
 python-dateutil
 six
+<<<<<<< HEAD
 annotated-types
 google-generativeai
 python-jose
 bcrypt
+=======
+>>>>>>> 98a826a (fixed errors in frontend and backend)

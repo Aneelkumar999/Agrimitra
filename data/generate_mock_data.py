@@ -3,6 +3,7 @@ import numpy as np
 import sqlite3
 from datetime import datetime, timedelta
 import random
+import os
 
 def generate_mock_data():
     # 1. Setup Dates
@@ -60,10 +61,29 @@ def generate_mock_data():
         {"id": 24, "name": "Kakinada", "state": "Andhra Pradesh", "district": "Kakinada", "lat": 16.9891, "lon": 82.2475},
         {"id": 25, "name": "Srikakulam", "state": "Andhra Pradesh", "district": "Srikakulam", "lat": 18.3019, "lon": 83.8918},
         {"id": 26, "name": "Tirupati", "state": "Andhra Pradesh", "district": "Tirupati", "lat": 13.6285, "lon": 79.4192}
-    ]
+]
     df_mandi = pd.DataFrame(mandis)
 
-    conn = sqlite3.connect('backend/agrimitra_v2.db')
+    # Get the correct database path regardless of where the script is run from
+    backend_dir = os.path.dirname(os.path.abspath(__file__))
+    backend_dir = os.path.dirname(backend_dir)  # Go up one level from data to project root
+    db_path = os.path.join(backend_dir, 'backend', 'agrimitra_v2.db')
+    conn = sqlite3.connect(db_path)
+    
+    # Clear existing data to avoid unique constraint errors
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM commodities")
+    cursor.execute("DELETE FROM mandis")
+    cursor.execute("DELETE FROM price_history")
+    cursor.execute("DELETE FROM weather_data")
+    cursor.execute("DELETE FROM ndvi_index")
+    cursor.execute("DELETE FROM alerts")
+    cursor.execute("DELETE FROM schemes")
+    cursor.execute("DELETE FROM cold_storage")
+    cursor.execute("DELETE FROM forecasts")
+    cursor.execute("DELETE FROM bookings")
+    cursor.execute("DELETE FROM users")
+    conn.commit()
     
     # 4. History, Weather, NDVI
     price_records = []
