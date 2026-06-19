@@ -3,6 +3,9 @@
 
 AgriMitra v2.0 is a comprehensive digital platform designed to empower farmers in Telangana and Andhra Pradesh with data-driven insights and AI-powered advice. It provides real-time market information, price predictions, irrigation guidance, and access to government schemes and storage facilities.
 
+## Frontend:https://agrimitraseva.netlify.app/
+## Backend:https://agrimitra-backend.onrender.com
+
 ## 🚀 Key Features
 
 - **Market Insights:** Access historical and current modal prices for various commodities across major Mandis (markets) in Telangana and AP.
